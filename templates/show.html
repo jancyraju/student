@@ -1,0 +1,30 @@
+{% extends 'home.html' %}
+{% block title %}student Details{% endblock%}
+{% block content %}
+<h1 class = "text center" style="text-align: center;">Student details</h1>
+  <table class="container table table-dark table-striped text-center">
+	<tr>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Phone Number</th>
+		<th>Address</th>
+		<th>Place</th>
+		<th></th>
+		<th></th>
+	</tr>
+	{% for i in form %}
+	<tr>
+		<td>{{i.stud_name}}</td>
+		<td>{{i.stud_email}}</td>
+		<td>{{i.stud_phno}}</td>
+		<td>{{i.stud_address}}</td>
+		<td>{{i.stud_place}}</td>
+		<td><a href="{% url 'edit'%}?edit={{i.stud_id}}"class="btn text-light btn-outline-secondary">Edit</a></td>
+		<td><a href="{% url 'delete'%}?delete={{i.stud_id}}"class="btn text-light btn-outline-secondary">Delete</a></td>
+
+	</tr>
+	{% endfor %}
+</table>
+
+{% endblock content %}  
+                  

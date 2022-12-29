@@ -1,0 +1,76 @@
+{% extends 'mainbase.html' %}
+{% load static %}
+{% block title %}signup{% endblock title %}
+{% block content%}
+<style>
+  .error {
+    border: solid red !important;
+  }
+
+  .success{
+    border: solid green !important;
+  }
+  .px p {
+    text-align : center;
+    color : red;
+
+
+  }
+</style>
+
+<div style=" background-color: black;
+padding: 50px;
+margin-top:  5%;
+border: 1px dotted black;
+border-radius: 35px;
+margin-right:450px;
+margin-left:450px; 
+display: flex;
+justify-content: center;
+background-image: url ('https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fcollege-campus&psig=AOvVaw0odr-vQW3aXeKukComBKkP&ust=1670399640816000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCPjTzdvB5PsCFQAAAAAdAAAAABAE')
+">
+
+<div style="text-align: center">
+    <div style="padding-left:20px;" >
+    </div>
+
+    <div class="nav justify-content-center" style="padding-top: 15px;">
+      <h3 style="color: white; font-family:cursive;">SIGN UP</h3>
+    </div>  
+
+    <div class="px">
+      <p id="text"></p>
+    </div>  
+
+        <div class="row d-block" style="d-flex justify-content-center">
+          <form action="" method="POST">
+              {% csrf_token %}
+            <div>{% for message in messages %}
+                <h3 style="color: white;">{{message}}</h3>
+                {% endfor %} 
+            </div>
+      
+            <div class="col" style="padding-top: 5px;">
+                <input id="name" name="name" type="text" class="form-control" placeholder="name" onchange="validname()" required>
+            </div> 
+            <div class="col" style="padding-top: 15px; margin-bottom: 1rem;" >
+              <input id="email" name="email" type="email" class="form-control" placeholder="emailid" onchange="validemail()" >
+            </div>
+            <div  class="col" style="padding-top: 10px; margin-bottom: 1rem;">
+                <input  id="ph" name="ph"  type="number" class="form-control" placeholder="phone number" onchange="validph()" >
+            </div>
+            <div class="col" style="padding-top: 15px;">
+              <input  id="pass1" name="password" type="password" class="form-control" placeholder="Password" onchange="validpass()" >
+            </div>
+            <div class="col" style="padding-top: 15px; ">
+                <input  id="pass2" name="password2" type="password" class="form-control" placeholder="conform Password" onchange="validpassconform()">
+            </div>
+            <div class="nav justify-content-center" style="padding-top:15px;">
+                <button id="signup" type="submit" class="btn btn-outline" style="background-color:white;"> signup</button>
+            </div>
+          </form>
+        </div>
+</div>
+
+<script src="{% static 'js/signup.js' %}"></script>
+{% endblock content%}

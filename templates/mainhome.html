@@ -1,0 +1,56 @@
+ {% extends 'mainbase.html' %}
+ {% load static %}
+ {% block title %}Home{% endblock title %}
+
+ {% block navs %}
+ <div style=" background-color: #ff; font-size:22px; font-family:courier">
+ <nav class="nav justify-content-center">
+  <a class="nav-link link-success active" style="color:blue;" href="{% url 'mainhome'%}">Home</a>
+  <a class="nav-link link-success" style="color:blue;" href="{% url 'course'%}">Course</a>
+  <a class="nav-link link-success" style="color:blue;" href="{% url 'gallery'%}">Gallery</a>
+  <a class="nav-link link-success" style="color:blue;" href="{% url 'contact'%}">Contact</a>
+</nav><br>
+</div>
+{% endblock navs %}
+
+{% block content %}
+<div class="d-flex;" style="background:	#e6f9ff;">
+  <div>
+    <div class="text-center">     
+      <div class="text-center">
+        <img src="{% static 'image/s.png' %}" class="rounded" alt="..." height="115px" width="500px">
+      </div><br>
+</div>
+<img src="{% static 'image/g.jpg' %}" class="rounded mx-auto d-block" height="400px" width="1420px" alt="..."><br>
+<p style="margin-left:15px; margin-right:15px;">ADVANCED INSTITUTE OF TECHNOLOGY AND MANAGEMENT (AITM) is a pioneer engineering college in the Palwal District, set up in the year 2006. AITM believes in imparting futuristic technical education & instills a high pattern of discipline through dedicated & trained faculty, who shall set global standards, making the students technologically superior, ethically strong with a renewed moral sensibility .</p>
+<br><br><br>
+<h3 style="margin-left:15px;">CAMPUS</h3>
+<img src="{% static 'image/ca.jpg' %}" class="rounded float-end" alt="..." width="400px" height="250px" style="margin-right:25px;">
+<p style="margin-left:15px; margin-right:15px;">The AEI campus is sited on the Delhi-Mathura National Highway-2 in Village Aurangabad, Tehsil Hodal in District Palwal, Haryana.The AEI campus provides the internet with 30 Mbps & more than 700 computer systems, an air-conditioned seminar hall with 220 seating capacity, separate library for each institution, laboratories, workshop, advanced ERP system, ATM, cafeteria, security, health care, conveyance, sports facility and separate hostel for boys & girls. The AEI campus conducts more than 12 academic programmes as graduate, post-graduate and diploma in various disciplines of engineering & technology, management, pharmacy, computer application and education field The campus 16 km away from the Town Hodal, 10 km from the Town Hatin and 13 km from the Palwal City. The campus is spread over in 25 acres of land on the outskirt of the Palwal City. There are four colleges established on the AEI campus as Advanced Institute of Technology and Management, Advanced College of Technology and Management, Advanced Institute of Pharmacy and Advanced Institute of Education. The AEI campus provides the internet with 30 Mbps & more than 700 computer systems, an air-conditioned seminar hall with 220 seating capacity, separate library for each institution, laboratories, workshop, advanced ERP system, ATM, cafeteria, security, health care, conveyance, sports facility and separate hostel for boys & girls.</p>
+<br><br><br>
+<h3 style="margin-left:15px;">ACTIVITIES</h3>
+<img src="{% static 'image/c.jpg' %}" class="rounded float-end" alt="..." width="400px" height="250px" style="margin-right:25px;">
+<p style="margin-left:15px; margin-right:15px;">The campus organizes seminars, workshops, industrial visits educational tour, alumni meets, guest lecture, sports day and various co-curricular & extracurricular activities. Achieve academic excellence in professional education at par with the leading national and international institutions. To impart value based Vision and Mission, world class education with the purpose to contribute to the society through excellence in the emerging areas of engineering, technology, management, pharmacy and education. Focus on practical aspects of the course material so as to make learning a meaningful and interesting experience in our intellectually stimulating campus. Create an environment with people having similar goals and aspirations to be visionaries. Actively encourage collaboration with industries, communities and the fellow institutions in the country and abroad. Work to inculcate high moral and ethical values amongst the students to make them responsible citizens and good human beings. To imbibe the winner's attitude necessary for achieving success. </p>
+<br><br><br><br>
+<h3 style="margin-left:15px;">PROGRAMMES</h3>
+<img src="{% static 'image/x.jpg' %}" class="rounded float-end" alt="..." width="400px" height="250px" style="margin-right:25px;">
+<p style="margin-left:15px; margin-right:15px;">The AEI campus conducts more than 12 academic programmes as graduate, post-graduate and diploma in various disciplines of engineering & technology, management, pharmacy, computer application and education field. The AEI campus provides the internet with 30 Mbps & more than 700 computer systems, an air-conditioned seminar hall with 220 seating capacity, separate library for each institution, laboratories, workshop, advanced ERP system, ATM, cafeteria, security, health care, conveyance, sports facility and separate hostel for boys & girls. . The AEI campus is affiliated to the MD University, Rohtak and Pt. B.D. Sharma University of Health Sciences, Rohtak. The AEI campus is approved by the AICTE, MHRD, PCI, NCTE and the DTE Haryana. All courses of education are accredited by the NAAC. There are four colleges established on the AEI campus as Advanced Institute of Technology and Management, Advanced College of Technology and Management, Advanced Institute of Pharmacy and Advanced Institute of Education. </p>
+<br><br><br><br><br><h3 style="margin-left:15px;">Why you choose AITM ?</h3>
+<ul style="margin-left:15px; margin-right:15px;">
+  <li>Activities related to education are there in the educational institution.</li>
+  <li> The organization can get a building and use that building to provide training and education</li>
+  <li>These educational institutions have one education head.</li>
+  <li>The institution has other personnel, teaching, and nonteaching.</li>
+  <li>There are different works which the personnel have to do </li>
+  <li>The educational institutions have a curriculum that all the educational institutions </li>
+  <li>Public authority takes care of the control and finance of these institutions.</li>
+  <li>The medium of instruction can be virtual classrooms.</li>
+  <li>Skill development College gives you the opportunity to major in a particular field.</li>
+  <li>This means you have the opportunity to gain industry-specific skills and knowledge.</li>
+  <li>Job security Employers value employees with specialized knowledge and higher education levels</li>
+  <li>Education teaches us to find out the truth based on reason rather than opinion.</li>
+  <li>Education teaches us to differentiate between vicious and virtues behavior</li>
+</ul><br><br><br><br>
+</div>
+</div>
+{% endblock content %}

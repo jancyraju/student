@@ -1,0 +1,36 @@
+{% extends 'home.html' %}
+{% block title %}Edit student form{% endblock title %}
+{% block content%}
+<div class="card text-center">
+    <div class="card-header">
+        <h2 class="text-center">Student edit form</h2>
+    </div>
+    <div class="card-body">
+        <form action="" method="POST" class="container">
+            {% csrf_token %} {% for i in form %}
+            <div class="input-group mb-3">
+                <span class="input-group-text bg-dark text-secondary w-25">Student Name</span>
+                <input type="text" aria-label="First name" class="form-control" name="stud_name" placeholder="student name">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text bg-dark text-secondary w-25">Student Email</span>
+                <input type="text" aria-label="First name" class="form-control" name="stud_email" placeholder="student email">
+            </div><div class="input-group mb-3">
+                <span class="input-group-text bg-dark text-secondary w-25">Student phone number</span>
+                <input type="text" aria-label="First name" class="form-control" name="stud_phno" placeholder="student phone">
+            </div><div class="input-group mb-3">
+                <span class="input-group-text bg-dark text-secondary w-25">Student address</span>
+                <input type="text" aria-label="First name" class="form-control" name="stud_address" placeholder="student address">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text bg-dark text-secondary w-25">Student place</span>
+                <input type="text" aria-label="First name" class="form-control" name="stud_place" placeholder="student place">
+            </div>
+            <div class="card-footer text-muted d-flex justify-content-center">
+                <input type="submit" value="edit">
+            </div>
+            {% endfor %}
+
+        </form>
+    </div>
+     {% endblock content %}

@@ -1,0 +1,65 @@
+{% extends 'mainbase.html' %}
+ {% block title %}Contact{% endblock title %}
+{% load static %}
+
+{% block navs %}
+ <div style=" background-color: #ff; font-size:22px; font-family:courier">
+ <nav class="nav justify-content-center">
+  <a class="nav-link link-success active" style="color:blue;" href="{% url 'mainhome'%}">Home</a>
+  <a class="nav-link link-success" style="color:blue;" href="{% url 'course'%}">Course</a>
+  <a class="nav-link link-success" style="color:blue;" href="{% url 'gallery'%}">Gallery</a>
+  <a class="nav-link link-success" style="color:blue;" href="{% url 'contact'%}">Contact</a>
+</nav><br>
+</div>
+{% endblock navs %}
+
+{% block content %}
+<div style="background:	#e6f9ff;">
+
+{% if out == 1%}
+<div class="alert alert-dark container text-center col-6" role="alert" style="font-family : cursive ;">
+    hii {{name}}, we will contact you later....
+</div>
+{% endif %}
+
+<div class="container d-flex">
+    <div class="container w-25 mr-5">
+        <h3 class="text-muted-center" style="padding-left: 550px; font-family :times new roman ; color: black;">CONTACT_US</h3>
+        <img src="{% static 'image/ph.jpg' %}" class="rounded" alt="..." height="60px" width="200px"><br><br>
+        <p class="text-muted" style="padding-top: 15px;"><img src="{% static 'image/call.jpg' %}" class="rounded" alt="..." height="50px" width="50px">9834652345</p>
+        <p class="text-muted"style="padding-top: 25px;"><img src="{% static 'image/email.jpg' %}" class="rounded" alt="..." height="40px" width="50px">enquiry@gmail.com   hr@technolab.com</p>
+        <br>
+        <p class="text-muted" style="padding-top: 15px;" ><img src="{% static 'image/wtsp.jpg' %}" class="rounded" alt="..." height="40px" width="40px">6238083618</p><br>
+        <p class="text-muted" style="padding-top: 15px;"><img src="{% static 'image/map.png' %}" class="rounded" alt="..." height="30px" width="50px">70 K.M., Delhi-Mathura Road, Dist, Palwal, Haryana 121105</p>
+        <p style="padding-top: 100px;"></p>
+      </div>
+    <div class="container mi-5" style="width: 55rem;">
+      <br> <br> <div class="d-flex justify-content-center" style="font-family : cursive ;">
+        <br><p>If you have any clarifications please contact us..</p></div> <br>
+        <form action="" method="POST">
+            {% csrf_token %} 
+    <div class="row mb-3">
+      <label for="name" class="col-sm-2 col-form-label">Name</label>
+      <div class="col-sm-10">
+      <input type="text" class="form-control" id="name" name="name">
+    </div> 
+ </div>
+    <div class="row mb-3">
+        <label for="colFormLabelSm" class="col-sm-2 col-form-label ">Email</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control" id="email" name="email">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="phno" class="col-sm-2 col-form-label ">phone number</label>
+        <div class="col-sm-10">
+        <input type="number" class="form-control" id="phno" name="phno">
+        </div>
+    </div> <br>
+    <div class="d-flex justify-content-center">
+        <button class="btn btn-outline-dark" type="submit" style="background-color:white;">submit</button>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

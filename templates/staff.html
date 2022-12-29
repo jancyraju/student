@@ -1,0 +1,24 @@
+{% extends 'home.html' %}
+{% block title %}staff Details{% endblock%}
+{% block content %}
+<h1 class = "text center" style="text-align: center;">staff Details</h1>
+  <table class="container table table-dark table-striped text-center">
+	<tr>
+		<th>Staff name</th>
+        <th>Staff email</th>
+        <th>Phone Number</th>
+	</tr>
+	{% for i in form %}
+	 <tr>
+		<td>{{i.name}}</td>
+		<td>{{i.email}}</td>
+		<td>{{i.phno}}</td>
+	</tr> 
+	{% endfor %}
+</table>
+
+{% endblock %}
+
+
+
+

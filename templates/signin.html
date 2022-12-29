@@ -1,0 +1,50 @@
+{% extends 'mainbase.html' %}
+{% load static %}
+{% block title %}signin{% endblock title %}
+
+  {% block content%}
+<div class="d-flex;" style=" background-image:url(static/image/bgcolor.jpg); height:900px;">
+    <div style="
+    padding: 50px;
+    margin-right:450px;
+    margin-left:450px;
+    heigtht:700px;"    >
+  <div>
+        <form action="" method="POST">
+          {% csrf_token %}
+        <div style="text-align:center;">{% for message in messages %}
+          <p style="color: red;">{{message}}</p>
+            {% endfor %} 
+          </div>
+          <div >
+          <div style="display: flex; justify-content: center; height: 60px;">
+          </div><br>
+           <div class="d-flex justify-content-center" style="padding-top: 15px;">
+            <h3 style="color: black; font-family:cursive;">Sign In</h3><br>
+           </div>
+           <div class="px">
+            <p id="text"></p>
+           </div>
+            <div class="row d-block">
+              <div>
+                <input id="email" name="email" type="email" class="form-control" placeholder="emailid">
+              </div>
+              <div style="padding-top: 25px;">
+                <input id="password" name="password" type="password" class="form-control" placeholder="Password">
+              </div>
+            </div>
+            <div style="display: flex; justify-content: center; padding-top: 20px;" >
+              <button type="submit" class="btn btn-outline-dark" style="background-color:white;"> Sign In</button>
+            </div><br>
+            <div style="text-align:center;">
+              <a href="{% url 'forgot'%}" style="color:blue; font-size:20px; font-family: lucida Console;">Forgot Password</a><br><br>
+              <p style="font-family:serif;">Not Registered?  <button type="button" class="btn btn-outline-dark" onclick="window.location.href='../signup'" style="margin-right:30px; padding:2px; background-color:default;">Sign Up</button></p>
+
+            </div>
+          </form>
+        </div>
+      </div>
+  </div>
+</div>
+      {%endblock content%}
+        
